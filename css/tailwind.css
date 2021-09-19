@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .hamburger {
+        @apply relative transform rotate-0 transition duration-500 ease-in-out
+    }
+
+    .hamburger div.line {
+        @apply absolute left-0 h-1/5 w-full rounded opacity-100 transform rotate-0 transition duration-250 ease-in-out
+    }
+
+    .hamburger.show-x :nth-child(1),
+    .hamburger.show-x :nth-child(4) {
+        width: 0;
+        left: 50%;
+        opacity: 0;
+    }
+
+    .hamburger.show-x :nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .hamburger.show-x :nth-child(3) {
+        transform: rotate(-45deg);
+    } 
+}

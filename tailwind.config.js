@@ -6,7 +6,11 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      transitionDuration: {
+        '250': '250ms'
+      }
+    },    
   },
   variants: {
     extend: {},
