@@ -20,20 +20,8 @@
 
     <script>
         $(document).ready(function () {
-            $("header").load("./header.htm");
-
-            const params = new URLSearchParams(window.location.search);
-            const requestedPage = params.get('page');
-
-            if (requestedPage === 'services') {
-                $("main").load("./services.htm");
-            } else if (requestedPage === 'about') {
-                $("main").load("./about.htm");
-            } else if (requestedPage === 'contact') {
-                $("main").load("./contact.htm");
-            } else {
-                $("main").load("./home.htm");
-            }
+            $("header").load("./partials/menu/_header.htm");
+            $("main").load("./partials/_home.htm");
         });
     </script>
 </body>
