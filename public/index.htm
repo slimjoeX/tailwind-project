@@ -26,11 +26,11 @@
             const requestedPage = params.get('page');
 
             if (requestedPage === 'services') {
-
+                $("main").load("./services.htm");
             } else if (requestedPage === 'about') {
-
+                $("main").load("./about.htm");
             } else if (requestedPage === 'contact') {
-
+                $("main").load("./contact.htm");
             } else {
                 $("main").load("./home.htm");
             }
